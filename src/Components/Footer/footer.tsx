@@ -49,8 +49,9 @@ export default function Footer() {
   const currentYear = myDate.getFullYear();
   return (
     <Box
-      bg={useColorModeValue("gray.50", "gray.900")}
+      bg="green.100"
       color={useColorModeValue("gray.700", "gray.200")}
+      pb={{ base: "3%", md: "0%" }}
     >
       <Container
         as={Stack}
@@ -68,7 +69,7 @@ export default function Footer() {
           fontWeight="bold"
           fontFamily="serif"
         >
-          <MdSchool color="red" size="30px" />
+          <MdSchool size="30px" />
           Academy
         </Text>
         <Text>

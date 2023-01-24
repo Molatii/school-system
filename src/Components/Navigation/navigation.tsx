@@ -5,7 +5,7 @@ import { BsFileEarmarkPdfFill } from "react-icons/bs";
 function Navigation() {
   return (
     <Box
-      bg="gray.400"
+      bg="green.500"
       w="100%"
       mt="0%"
       ml="0%"
@@ -20,7 +20,7 @@ function Navigation() {
         ml={{ base: "3%", md: "10%" }}
       >
         <Stack w={{ base: "60%", md: "40%" }} direction="row">
-          <Text mt="1%" fontSize="4xl" color="red.600">
+          <Text mt="1%" fontSize="4xl" color="white">
             <MdSchool />
           </Text>
           <Text
@@ -37,8 +37,9 @@ function Navigation() {
             display={{ base: "none", md: "flex" }}
             mt="0.5%"
             alignSelf="flex-end"
-            color="gray.600"
+            color="green.500"
             bg="white"
+            _hover={{ bg: "blue.500", color: "white" }}
           >
             DownLoad Prospectors <BsFileEarmarkPdfFill />
           </Button>
