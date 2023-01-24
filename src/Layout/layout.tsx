@@ -1,9 +1,12 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import Footer from "../Components/Footer/footer";
+import Navigation from "../Components/Navigation/navigation";
 
 function Layout() {
   return (
-    <Box>
-      <Text>School system</Text>
+    <Box w="100%">
+      <Navigation />
+      <Footer />
     </Box>
   );
 }
