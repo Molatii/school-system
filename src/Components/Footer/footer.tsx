@@ -52,6 +52,7 @@ export default function Footer() {
       bg="green.100"
       color={useColorModeValue("gray.700", "gray.200")}
       pb={{ base: "3%", md: "0%" }}
+      marginTop="auto"
     >
       <Container
         as={Stack}

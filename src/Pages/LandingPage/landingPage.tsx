@@ -9,6 +9,9 @@ import {
   useColorModeValue,
   createIcon,
 } from "@chakra-ui/react";
+import { animateScroll as scroll } from "react-scroll";
+import { useNavigate } from "react-router-dom";
+import bgImage from "../../images/v2.svg";
 
 const Arrow = createIcon({
   displayName: "Arrow",
@@ -24,25 +27,43 @@ const Arrow = createIcon({
 });
 
 export default function LandingPage() {
+  const navigate = useNavigate();
+  const userRoles = () => {
+    navigate("/user-roles");
+  };
+  // Scroll to top
+  const goToContantUs = () => {
+    scroll.scrollTo(700);
+  };
   return (
-    <Box w="100%">
+    <Box
+      w="100%"
+      minHeight="100vh"
+      display="flex"
+      flex-deriction="column"
+      backgroundImage={bgImage}
+      backgroundPosition="bottom"
+      backgroundRepeat="no-repeat"
+      backgroundSize="100%"
+    >
       <Container maxW={{ base: "2xl", md: "3xl" }}>
         <Stack as={Box} textAlign="center" spacing={{ base: 8, md: 8 }}>
           <Heading
             fontWeight={600}
             fontSize={{ base: "4xl", md: "6xl" }}
             lineHeight="110%"
-            mt="10%"
+            mt={{ base: "40%", md: "20%" }}
           >
-            Make money from <br />
+            Education the premise <br />
             <Text as="span" color="green.400">
-              your audience
+              of progress
             </Text>
           </Heading>
           <Text color="gray.500" pb="2%">
-            Monetize your content by charging your most loyal readers and reward
-            them loyalty points. Give back to your loyal readers by granting
-            them access to your pre-releases and sneak-peaks.
+            we believe education helps to attain success in life and it is a
+            right of every citizen. We believe that confidence, capability and
+            passion can be developed in all students irrespective of their
+            starting points.
           </Text>
           <Stack
             direction="column"
@@ -57,14 +78,25 @@ export default function LandingPage() {
               bg="green.400"
               rounded="full"
               size="lg"
+              onClick={userRoles}
               _hover={{ bg: "blue.500", color: "white" }}
             >
               Get Started
             </Button>
-            <Button variant="link" color="blue.500" size="lg" pt="5%">
-              Learn more
+            <Button
+              onClick={goToContantUs}
+              variant="link"
+              color="blue.500"
+              size="lg"
+              pt="10%"
+              pb="10%"
+              pl="5%"
+              pr="5%"
+              rounded="full"
+            >
+              Contact us <br />
             </Button>
-            <Box pb={{ base: "55%", md: "74%" }}>
+            <Box>
               <Icon
                 as={Arrow}
                 color={useColorModeValue("gray.800", "gray.300")}
