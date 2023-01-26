@@ -1,9 +1,25 @@
+/* eslint-disable prefer-const */
 import { Box, Button, Stack, Text } from "@chakra-ui/react";
 import { MdSchool } from "react-icons/md";
 import { BsFileEarmarkPdfFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import MobileNav from "./mobileNav";
 
 function Navigation() {
+  // download pdf file
+  const downloadPdf = () => {
+    fetch("molati_resume.pdf").then((response) => {
+      response.blob().then((blob) => {
+        // new pdf object
+        const fileURL = window.URL.createObjectURL(blob);
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "molati_resume.pdf";
+        alink.click();
+      });
+    });
+  };
+
   return (
     <Box
       bg="green.500"
@@ -30,7 +46,7 @@ function Navigation() {
             }}
           >
             <Stack direction="row" cursor="pointer">
-              <Text mt="1%" fontSize="4xl" color="white">
+              <Text mt={{ base: "6%", md: "1%" }} fontSize="4xl" color="white">
                 <MdSchool />
               </Text>
               <Text
@@ -38,6 +54,7 @@ function Navigation() {
                 color="white"
                 fontWeight="bold"
                 fontFamily="serif"
+                pt={{ base: "3%", md: "0%" }}
               >
                 Academy
               </Text>
@@ -51,10 +68,12 @@ function Navigation() {
             alignSelf="flex-end"
             color="green.500"
             bg="white"
+            onClick={downloadPdf}
             _hover={{ bg: "blue.500", color: "white" }}
           >
             DownLoad Prospectors <BsFileEarmarkPdfFill />
           </Button>
+          <MobileNav downloadPdf={downloadPdf} />
         </Stack>
       </Stack>
     </Box>

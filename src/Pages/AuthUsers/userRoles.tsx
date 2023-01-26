@@ -2,6 +2,7 @@ import { Box, Button, Stack, Flex, Heading } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { GiTeacher } from "react-icons/gi";
 import { FaUserTie } from "react-icons/fa";
+import { useEffect } from "react";
 import AuthLayout from "./authLayout";
 
 function UserRoles() {
@@ -14,6 +15,10 @@ function UserRoles() {
   const teacherLogIn = () => {
     navigate("/sign-in-teacher");
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  });
 
   return (
     <Box justifyContent="center" w="100%">

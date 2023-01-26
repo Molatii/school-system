@@ -13,6 +13,7 @@ import {
   Input,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthLayout from "../authLayout";
 
@@ -38,6 +39,10 @@ function TeacherSignUp() {
     showToast();
     navigate("/sign-in-teacher");
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  });
 
   return (
     <Box justifyContent="center" w="100%">
