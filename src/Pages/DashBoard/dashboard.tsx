@@ -38,7 +38,7 @@ export default function Dashboard({ children }: { children: ReactNode }) {
         ml={{ base: 0, md: 64 }}
         p="4"
         m="6"
-        mt="6"
+        mt={{ base: "13%", md: "5%" }}
         borderTopRadius={15}
       >
         {children}

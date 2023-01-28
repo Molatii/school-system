@@ -30,7 +30,7 @@ function Home() {
   return (
     <Box w="100%">
       <Dashboard>
-        <Box m={4}>
+        <Box m={4} mt={{ base: "8%", md: "3%" }}>
           <Stack
             spacing={5}
             alignItems="center"

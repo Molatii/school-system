@@ -29,7 +29,7 @@ function Profile() {
   return (
     <Box w="100%">
       <Dashboard>
-        <Box m={4}>
+        <Box m={4} mt={{ base: "8%", md: "3%" }}>
           <HStack>
             <Text fontFamily="sans-serif" mt={3} fontSize="2xl">
               Profile

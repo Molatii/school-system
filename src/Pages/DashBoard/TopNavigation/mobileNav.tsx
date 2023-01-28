@@ -30,6 +30,9 @@ export default function MobileNav({ onOpen, ...rest }: MobileProps) {
       height="20"
       alignItems="center"
       bg="green.500"
+      pos="fixed"
+      zIndex={2}
+      mt="-13%"
       borderBottomWidth="1px"
       w="100%"
       borderBottomColor={useColorModeValue("gray.200", "gray.700")}

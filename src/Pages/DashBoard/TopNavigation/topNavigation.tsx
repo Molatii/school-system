@@ -38,7 +38,9 @@ function TopNavigation() {
       justifyContent="center"
       w="100%"
       bg="green.500"
-      mt="0%"
+      pos="fixed"
+      zIndex={2}
+      mt="-5%"
       ml="0%"
       display={{ base: "none", md: "block" }}
     >
