@@ -34,7 +34,7 @@ function TeacherSignIn() {
   };
   const signIn = () => {
     showToast();
-    navigate("/dashboard");
+    navigate("/home");
   };
 
   useEffect(() => {
